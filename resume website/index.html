@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Free Resume Builder</h1>
+    <p>Create an ATS-friendly resume in minutes. No data is stored!</p>
+
+    <!-- Resume Form -->
+    <form id="resume-form">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" required>
+
+      <label for="summary">Professional Summary:</label>
+      <textarea id="summary" rows="4" required></textarea>
+
+      <label for="experience">Work Experience:</label>
+      <textarea id="experience" rows="6" required></textarea>
+
+      <label for="education">Education:</label>
+      <textarea id="education" rows="4" required></textarea>
+
+      <label for="skills">Skills:</label>
+      <textarea id="skills" rows="4" required></textarea>
+
+      <button type="button" onclick="generateResume()">Generate Resume</button>
+    </form>
+  </div>
+
+  <!-- Include jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2992214582994478"
+     crossorigin="anonymous"></script>
+</body>
+</html>
