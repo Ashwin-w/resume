@@ -3,45 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Resume Builder</title>
+  <title>Modern Resume Builder</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <h1>Free Resume Builder</h1>
-    <p>Create an ATS-friendly resume in minutes. No data is stored!</p>
+    <h1>Modern Resume Builder</h1>
+    <p class="tagline">Create a professional, ATS-friendly resume with links to your work</p>
 
-    <!-- Resume Form -->
     <form id="resume-form">
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" required>
+      <div class="form-section">
+        <h2 class="section-title">Personal Information</h2>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required placeholder="John Doe">
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required placeholder="john@example.com">
 
-      <label for="phone">Phone:</label>
-      <input type="tel" id="phone" required>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" required placeholder="(123) 456-7890">
 
-      <label for="summary">Professional Summary:</label>
-      <textarea id="summary" rows="4" required></textarea>
+        <label for="linkedin">LinkedIn Profile:</label>
+        <input type="url" id="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+        <p class="tooltip">Include your LinkedIn profile URL (optional)</p>
+      </div>
 
-      <label for="experience">Work Experience:</label>
-      <textarea id="experience" rows="6" required></textarea>
+      <div class="form-section">
+        <h2 class="section-title">Professional Details</h2>
+        <label for="summary">Professional Summary:</label>
+        <textarea id="summary" rows="4" required placeholder="Experienced professional with..."></textarea>
 
-      <label for="education">Education:</label>
-      <textarea id="education" rows="4" required></textarea>
+        <label for="experience">Work Experience:</label>
+        <textarea id="experience" rows="6" required placeholder="Company Name, Position, Dates
+- Achievement 1
+- Achievement 2"></textarea>
 
-      <label for="skills">Skills:</label>
-      <textarea id="skills" rows="4" required></textarea>
+        <label for="education">Education:</label>
+        <textarea id="education" rows="4" required placeholder="University Name, Degree, Dates"></textarea>
 
-      <button type="button" onclick="generateResume()">Generate Resume</button>
+        <label for="skills">Skills:</label>
+        <textarea id="skills" rows="4" required placeholder="Skill 1, Skill 2, Skill 3"></textarea>
+      </div>
+
+      <div class="form-section">
+        <h2 class="section-title">Projects & Links</h2>
+        <label>Project 1:</label>
+        <div class="link-field">
+          <input type="text" id="project1-title" class="link-label" placeholder="Project Name">
+          <input type="url" id="project1-link" class="link-input" placeholder="https://project1.com">
+        </div>
+
+        <label>Project 2:</label>
+        <div class="link-field">
+          <input type="text" id="project2-title" class="link-label" placeholder="Project Name">
+          <input type="url" id="project2-link" class="link-input" placeholder="https://project2.com">
+        </div>
+        
+        <p class="tooltip">Add links to your GitHub, portfolio, or other projects (optional)</p>
+      </div>
+
+      <button type="button" onclick="generateResume()">Generate Professional Resume</button>
     </form>
   </div>
 
-  <!-- Include jsPDF -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="script.js"></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2992214582994478"
      crossorigin="anonymous"></script>
+
 </body>
 </html>
